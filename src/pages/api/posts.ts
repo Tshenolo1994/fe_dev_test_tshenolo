@@ -1,15 +1,14 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import { log } from "console";
 import type { NextApiRequest, NextApiResponse } from 'next'
 
-interface Post {
+export interface Post {
   id: number,
   title: string;
   body: string;
   authorId: number;
 }
 
-let posts: Post[] = [
+export let posts: Post[] = [
   {
     id: 1,
     title: 'My First Post',
@@ -41,6 +40,6 @@ export default function handler(
     posts.push(newPost);
     res.status(201).json(newPost);
   }
-
   res.status(200).json(posts);
 }
+
