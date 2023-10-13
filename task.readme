@@ -1,13 +1,12 @@
 API DOCUMENTATION https://documenter.getpostman.com/view/4115067/2s9YR55EfZ
 
-1. Create a home page that lists all available posts and add an input field to filter it
+1. Create a home page that lists all available posts and add an input field to filter it. 
+The post should show the title and who wrote it
 
-2. The post should show the title and who wrote it
+2. Clicking a post should route you to a new page to display the text body and author of the post
 
-3. Clicking a post should route you to a new page to display the text body and author of the post
+3. The comments (and their authors) for the post should be listed below the post
 
-4. The comments (and their authors) for the post should be listed below the post
+4. There should be a text area which allows you to add a comment to the post
 
-5. There should be a text area which allows you to add a comment to the post
-
-6. You should be able to favourite the post, and this will make it viewable in the menu.
+5. You should be able to favourite the post, and this will make it viewable in the menu.
