@@ -22,13 +22,14 @@ let comments: Comment[] = [
 
 export default function handler(
   req: NextApiRequest,
-  res: NextApiResponse<Comment[]>
+  res: NextApiResponse<Comment[] | Comment>
 ) {
   if (req.method === 'POST') {
     const { text, profileId } = req.body;
     const postId = parseInt(req.query.id as string);
     const newComment = { postId, text, profileId };
     comments.push(newComment);
+    res.status(200).json(newComment);
   }
   res.status(200).json(comments.filter(comment => comment.postId === Number(req.query.id)));
 
