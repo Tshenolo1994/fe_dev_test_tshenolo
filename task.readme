@@ -7,6 +7,7 @@ The post should show the title and who wrote it
 
 3. The comments (and their authors) for the post should be listed below the post
 
-4. There should be a text area which allows you to add a comment to the post
+4. There should be a text area which allows you to add a comment to the post. You can get the user profile by 
+accessing /api/my-profile
 
 5. You should be able to favourite the post, and this will make it viewable in the menu.
