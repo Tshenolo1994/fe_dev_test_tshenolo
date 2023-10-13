@@ -6,23 +6,27 @@ interface Post {
   id: number,
   title: string;
   body: string;
+  authorId: number;
 }
 
 let posts: Post[] = [
   {
     id: 1,
     title: 'My First Post',
-    body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, urna vel bibendum bibendum, nisl velit bibendum sapien, vel bibendum sapien elit vel nunc. Sed euismod, urna vel bibendum bibendum, nisl velit bibendum sapien, vel bibendum sapien elit vel nunc.'
+    body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, urna vel bibendum bibendum, nisl velit bibendum sapien, vel bibendum sapien elit vel nunc. Sed euismod, urna vel bibendum bibendum, nisl velit bibendum sapien, vel bibendum sapien elit vel nunc.',
+    authorId: 2,
   },
   {
     id: 2,
     title: 'My Second Post',
-    body: 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed euismod, urna vel bibendum bibendum, nisl velit bibendum sapien, vel bibendum sapien elit vel nunc. Sed euismod, urna vel bibendum bibendum, nisl velit bibendum sapien, vel bibendum sapien elit vel nunc.'
+    body: 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed euismod, urna vel bibendum bibendum, nisl velit bibendum sapien, vel bibendum sapien elit vel nunc. Sed euismod, urna vel bibendum bibendum, nisl velit bibendum sapien, vel bibendum sapien elit vel nunc.',
+    authorId: 2,
   },
   {
     id: 3,
     title: 'My Third Post',
-    body: 'Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed euismod, urna vel bibendum bibendum, nisl velit bibendum sapien, vel bibendum sapien elit vel nunc. Sed euismod, urna vel bibendum bibendum, nisl velit bibendum sapien, vel bibendum sapien elit vel nunc.'
+    body: 'Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed euismod, urna vel bibendum bibendum, nisl velit bibendum sapien, vel bibendum sapien elit vel nunc. Sed euismod, urna vel bibendum bibendum, nisl velit bibendum sapien, vel bibendum sapien elit vel nunc.',
+    authorId: 3,
   }
 ];
 
@@ -31,9 +35,9 @@ export default function handler(
   res: NextApiResponse<Post[] | Post>
 ) {
   if (req.method === 'POST') {
-    const { title, body } = req.body;
+    const { title, body, authorId } = req.body;
     const lastId = posts[posts.length - 1].id;
-    const newPost = { title, body, id: lastId + 1 };
+    const newPost = { title, body, id: lastId + 1, authorId };
     posts.push(newPost);
     res.status(201).json(newPost);
   }
