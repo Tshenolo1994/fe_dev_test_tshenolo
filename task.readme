@@ -1,0 +1,10 @@
+create a home page that lists all available posts
+
+The post should show the title
+and who wrote it
+
+clicking a post should display the text body and author of the post
+
+the comments (and their authors) for the post should be listed below the post
+
+there should be a text area which allows you to add a comment to the post
