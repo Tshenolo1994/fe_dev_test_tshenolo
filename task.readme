@@ -1,4 +1,5 @@
 API DOCUMENTATION https://documenter.getpostman.com/view/4115067/2s9YR55EfZ
+PLEASE DO NOT ADD OR ADJUST ANY API ROUTES
 
 1. Create a home page that lists all available posts and add an input field to filter it on the client. 
 The post should show the title and who wrote it
@@ -11,3 +12,4 @@ The post should show the title and who wrote it
 accessing /api/my-profile
 
 5. You should be able to favourite the post, and this will make it viewable on a favourites list which is on every page.
+ This should all be handled on the client.
