@@ -18,6 +18,6 @@
 
 6. Each tasks should be in its own commit.
 
-7. Once you have completed the test, upload it to a public repo as: fe_dev_test_{your_name} and email it to dan@cars.co.za
+7. Once you have completed the test, upload it to a public repo as: fe_dev_test_{your_name} and email it to camille@ferva.co.za
 
 ### Good luck!
